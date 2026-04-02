@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cover</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  width: 900px;
+  height: 1200px;
+}
+body {
+  background-color: {{BG_COLOR}};
+  font-family: "PingFang SC", "Microsoft YaHei", "SimHei", sans-serif;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* 主标题 - 正红色粗黑，1.2倍行距，超粗 */
+.title { 
+  font-size: 110px; 
+  color: {{HIGHLIGHT_COLOR}};  /* 正红色 */
+  font-weight: 900;
+  font-family: "SimHei", "Heiti SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  line-height: 1.5;  /* 1.5倍行距 */
+  margin-bottom: 40px;
+  margin-top: 200px;
+  word-wrap: break-word;
+  max-width: 800px;
+  -webkit-text-stroke: 2px {{HIGHLIGHT_COLOR}};  /* 超粗描边 */
+}
+/* 副标题 - 正红色粗黑，1.2倍行距 */
+.subtitle { 
+  font-size: 48px; 
+  color: {{HIGHLIGHT_COLOR}};  /* 正红色 */
+  font-weight: 900;
+  font-family: "SimHei", "Heiti SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  margin-top: 30px; 
+  line-height: 1.2;  /* 1.2倍行距 */
+  word-wrap: break-word;
+  max-width: 800px;
+  -webkit-text-stroke: 1px {{HIGHLIGHT_COLOR}};  /* 描边加粗 */
+}
+/* 落款 - 宋体，居左偏下 */
+.footer { 
+  font-size: 28px;
+  color: #666666; 
+  font-family: "Songti SC", "SimSun", serif;
+  margin-top: auto;
+  padding-bottom: 40px;
+}
+</style>
+</head>
+<body>
+<div class="title">{{TITLE}}</div>
+<div class="subtitle">{{SUBTITLE}}</div>
+<div class="footer">{{FOOTER}}</div>
+</body>
+</html>

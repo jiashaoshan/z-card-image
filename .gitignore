@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Output
+output/
+*.png
+*.jpg
+*.jpeg

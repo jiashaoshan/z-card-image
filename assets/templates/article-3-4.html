@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Article Card</title>
+<style>
+  @font-face {
+    font-family: "AlimamaShuHeiTi";
+    src: url("{{FONT_PATH}}") format("truetype");
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 900px;
+    height: 1200px;
+    background-color: {{BG_COLOR}};
+    display: flex;
+    flex-direction: column;
+    padding: 56px 72px 56px 72px;
+    font-family: "PingFang SC", "Noto Sans SC", "Hiragino Sans GB", sans-serif;
+    position: relative;
+  }
+
+  /* 顶部栏 - 固定高度 */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    flex-shrink: 0;
+    gap: 12px;
+  }
+  .header img.logo { width: 36px; height: 36px; }
+  .header .title {
+    flex: 1;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "AlimamaShuHeiTi", "PingFang SC", sans-serif;
+    color: #888;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .header .page-label {
+    font-size: 18px;
+    color: #bbb;
+    letter-spacing: 1px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    flex-shrink: 0;
+  }
+
+  /* 正文区域 - 占满中间空间 */
+  .content {
+    flex: 1;
+    overflow: hidden;
+    font-size: 28px;
+    color: #2a2a2a;
+    line-height: 2.5;
+    letter-spacing: 0.5px;
+    padding: 16px 0;
+    max-height: 975px;
+  }
+
+  /* 底部栏 - 固定高度，与header相同 */
+  .footer {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .footer .watermark {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.55;
+  }
+  .footer .watermark img { width: 24px; height: 24px; border-radius: 50%; }
+  .footer .watermark span { font-size: 16px; color: #555; letter-spacing: 1px; }
+  .footer .tip { font-size: 16px; color: #aaa; }
+</style>
+
+<link rel="stylesheet" href="file://{{MD_CSS_PATH}}">
+
+<style>
+  .content strong, .content b { color: {{HIGHLIGHT_COLOR}}; }
+  .content h2 { border-left-color: {{HIGHLIGHT_COLOR}}; color: {{HIGHLIGHT_COLOR}}; }
+  .content h3 { color: {{HIGHLIGHT_COLOR}}; }
+  .content ul li::marker, .content ol li::marker { color: {{HIGHLIGHT_COLOR}}; }
+  .content blockquote { border-left-color: {{HIGHLIGHT_COLOR}}; }
+  .content code { color: {{HIGHLIGHT_COLOR}}; background: color-mix(in srgb, {{HIGHLIGHT_COLOR}} 12%, white); }
+</style>
+</head>
+<body>
+  <div class="header">
+    <img class="logo" src="file://{{ICON_PATH}}" alt="">
+    <span class="title">{{TITLE}}</span>
+    <span class="page-label">{{PAGE_LABEL}}</span>
+  </div>
+  <div class="divider"></div>
+  <div class="content">{{CONTENT_HTML}}</div>
+  <div class="footer">
+    <div class="watermark">
+      <span>{{FOOTER_TEXT}}</span>
+    </div>
+    <span class="tip">{{BOTTOM_TIP}}</span>
+  </div>
+</body>
+</html>
