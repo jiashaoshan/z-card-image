@@ -231,7 +231,7 @@ def main():
         tpl = TEMPLATE_PATH.read_text(encoding='utf-8')
     
     icon_path = args.icon or str(ICONS_DIR / 'zzclub-logo-gray.svg')
-    avatar_path = str(ICONS_DIR / 'avatar_default.svg') if (ICONS_DIR / 'avatar_default.svg').exists() else ''
+    avatar_path = ''  # 禁用头像
     font_path = str(FONTS_DIR / 'AlimamaShuHeiTi-Bold.ttf')
     md_css_path = str(MD_CSS_PATH)
 
